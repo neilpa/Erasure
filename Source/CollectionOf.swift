@@ -7,13 +7,13 @@
 //
 
 /// A type-erased collection type.
-public struct CollectionOf<T, I: ForwardIndexType>: CollectionType {
+public struct CollectionOf<T, Index: ForwardIndexType>: CollectionType {
     private let _generate: () -> GeneratorOf<T>
-    private let _subscript: (I) -> T
-    private let _startIndex: () -> I
-    private let _endIndex: () -> I
+    private let _subscript: (Index) -> T
+    private let _startIndex: () -> Index
+    private let _endIndex: () -> Index
 
-    public init<C: CollectionType where C.Generator.Element == T, C.Index == I>(_ base: C) {
+    public init<C: CollectionType where C.Generator.Element == T, C.Index == Index>(_ base: C) {
         _generate = { GeneratorOf(base.generate()) }
         _startIndex = { base.startIndex }
         _endIndex = { base.endIndex }
@@ -24,15 +24,15 @@ public struct CollectionOf<T, I: ForwardIndexType>: CollectionType {
         return _generate()
     }
 
-    public var startIndex: I {
+    public var startIndex: Index {
         return _startIndex()
     }
 
-    public var endIndex: I {
+    public var endIndex: Index {
         return _endIndex()
     }
 
-    public subscript (i: I) -> T {
-        return _subscript(i)
+    public subscript (index: Index) -> T {
+        return _subscript(index)
     }
 }
