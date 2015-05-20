@@ -7,32 +7,32 @@
 //
 
 /// A type-erased collection type.
-struct CollectionOf<T, I: ForwardIndexType>: CollectionType {
+public struct CollectionOf<T, I: ForwardIndexType>: CollectionType {
     private let _generate: () -> GeneratorOf<T>
     private let _subscript: (I) -> T
     private let _startIndex: () -> I
     private let _endIndex: () -> I
 
-    init<C: CollectionType where C.Generator.Element == T, C.Index == I>(_ base: C) {
+    public init<C: CollectionType where C.Generator.Element == T, C.Index == I>(_ base: C) {
         _generate = { GeneratorOf(base.generate()) }
         _startIndex = { base.startIndex }
         _endIndex = { base.endIndex }
         _subscript = { base[$0] }
     }
 
-    func generate() -> GeneratorOf<T> {
+    public func generate() -> GeneratorOf<T> {
         return _generate()
     }
 
-    var startIndex: I {
+    public var startIndex: I {
         return _startIndex()
     }
 
-    var endIndex: I {
+    public var endIndex: I {
         return _endIndex()
     }
 
-    subscript (i: I) -> T {
+    public subscript (i: I) -> T {
         return _subscript(i)
     }
 }

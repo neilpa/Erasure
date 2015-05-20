@@ -88,8 +88,8 @@
 		D80E2F5E1B0D0C89004DF326 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				D80E2F5F1B0D0C89004DF326 /* Supporting Files */,
 				D80E2FAC1B0D0F4E004DF326 /* CollectionOf.swift */,
+				D80E2F5F1B0D0C89004DF326 /* Supporting Files */,
 			);
 			path = Source;
 			sourceTree = "<group>";
