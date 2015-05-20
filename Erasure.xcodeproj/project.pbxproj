@@ -13,6 +13,8 @@
 		D80E2F9C1B0D0CE0004DF326 /* Erasure.h in Headers */ = {isa = PBXBuildFile; fileRef = D80E2F611B0D0C89004DF326 /* Erasure.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D80E2FAD1B0D0F4E004DF326 /* CollectionOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E2FAC1B0D0F4E004DF326 /* CollectionOf.swift */; };
 		D80E2FAE1B0D0F4E004DF326 /* CollectionOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E2FAC1B0D0F4E004DF326 /* CollectionOf.swift */; };
+		D80E2FB81B0D172B004DF326 /* SliceableOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E2FB71B0D172B004DF326 /* SliceableOf.swift */; };
+		D80E2FB91B0D172B004DF326 /* SliceableOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80E2FB71B0D172B004DF326 /* SliceableOf.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,7 @@
 		D80E2FA01B0D0D35004DF326 /* Erasure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Erasure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D80E2FA11B0D0D3C004DF326 /* ErasureTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ErasureTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D80E2FAC1B0D0F4E004DF326 /* CollectionOf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionOf.swift; sourceTree = "<group>"; };
+		D80E2FB71B0D172B004DF326 /* SliceableOf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliceableOf.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				D80E2FAC1B0D0F4E004DF326 /* CollectionOf.swift */,
+				D80E2FB71B0D172B004DF326 /* SliceableOf.swift */,
 				D80E2F5F1B0D0C89004DF326 /* Supporting Files */,
 			);
 			path = Source;
@@ -305,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D80E2FAD1B0D0F4E004DF326 /* CollectionOf.swift in Sources */,
+				D80E2FB81B0D172B004DF326 /* SliceableOf.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D80E2FAE1B0D0F4E004DF326 /* CollectionOf.swift in Sources */,
+				D80E2FB91B0D172B004DF326 /* SliceableOf.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
